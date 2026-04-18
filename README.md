@@ -1,88 +1,98 @@
-# DataOverview
+# Project Overview
 
-This folder contains two Python programs that help you understand a dataset from two different angles:
+This repo contains two Python programs:
 
-- `BusinessAnalytics.py` explores the data and produces business-style summaries and charts.
-- `DataOverview.py` builds a quick baseline machine learning model so you can test prediction ideas.
+- `businessanaylics.py`
+- `HRcleaner.py`
 
-Together, they give you a simple workflow:
+They are meant to be used together, but they solve different problems.
 
-1. Use `BusinessAnalytics.py` to understand the dataset, missing values, major categories, text patterns, and business trends.
-2. Use `DataOverview.py` to try a baseline prediction model and see which features matter most.
+## What Each Program Does
 
-## Purpose Of Each Program
+### `HRcleaner.py`
 
-### `BusinessAnalytics.py`
+`HRcleaner.py` is the data-cleaning step.
 
-This script is for exploratory data analysis and business insight generation.
+Its purpose is to take raw HR or open requisition data and turn it into a cleaner, more structured dataset that is easier to use for machine learning and analysis.
 
-It helps answer questions like:
+It can:
 
-- How many rows and columns are in the dataset?
-- Which columns are numeric, categorical, or text-heavy?
-- Where are the missing values?
-- Which locations, job profiles, or worker types appear most often?
-- How many openings are available?
-- Which locations or job profiles stay open the longest?
-- What words appear most often in text fields?
+- clean fields like `DAYS_OPEN`
+- handle missing values in important HR columns
+- clean text fields such as job descriptions
+- encode category columns into numeric codes
+- save a cleaned CSV
+- save mapping files so encoded values can still be understood later
+- save a report showing what was cleaned
 
-It is useful when you want charts and summary files that are easy to discuss in a business report or presentation.
+Use this first when your raw HR dataset is messy and needs preprocessing.
 
-### `DataOverview.py`
+### `businessanaylics.py`
 
-This script is for quick machine learning experimentation.
+`businessanaylics.py` is the analysis step.
 
-It helps answer questions like:
+Its purpose is to explore the cleaned dataset and generate useful business insights, summaries, and charts.
 
-- What column should be used as the prediction target?
-- Is this a classification problem or a regression problem?
-- How well does a basic model perform?
-- Which input features seem most important?
+It can:
 
-It is useful when you want a fast baseline model before doing deeper ML work.
+- show dataset shape, columns, and data types
+- show missing values
+- separate columns into numeric, categorical, and text groups
+- create charts for numeric and categorical columns
+- analyze text-heavy columns
+- show business trends such as locations, job profiles, worker types, and openings
+- produce summary files for reporting
 
-## Requirements
+Use this after cleaning when you want to understand the data and present insights.
 
-Install Python packages before running the scripts:
+## Recommended Workflow
+
+Use the programs in this order:
+
+1. Run `HRcleaner.py` on the raw HR dataset.
+2. Review the cleaned output files.
+3. Run `businessanaylics.py` on the cleaned CSV.
+4. Review the charts and summary files.
+
+## How To Run
+
+Install the needed packages first:
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn
 ```
 
-## How To Run
-
-Open a terminal in this folder:
+### Run `HRcleaner.py`
 
 ```bash
-cd DataOverview
-```
-
-### Run `BusinessAnalytics.py`
-
-Use:
-
-```bash
-python BusinessAnalytics.py your_file.csv
+python HRcleaner.py your_file.csv
 ```
 
 Example:
 
 ```bash
-python BusinessAnalytics.py hackathon.csv
+python HRcleaner.py "Open Reqs Mar 2026_2026-04-01.csv"
 ```
 
-What it does:
+Expected outputs:
 
-- loads the CSV file
-- trims column names
-- tries to convert columns to numeric when it is safe
-- groups columns into numeric, categorical, and text
-- prints a dataset overview
-- creates charts for missing values, numeric columns, categorical columns, correlations, and text terms
-- creates business-specific summaries for hiring-related columns when they exist
-- saves a preview file and a column summary file
+- `Cleaned_ML_Ready.csv`
+- `category_mappings.json`
+- `cleaning_report.json`
 
-Main output files:
+### Run `businessanaylics.py`
+
+```bash
+python businessanaylics.py Cleaned_ML_Ready.csv
+```
+
+Example:
+
+```bash
+python businessanaylics.py Cleaned_ML_Ready.csv
+```
+
+Expected outputs may include:
 
 - `missing_values.png`
 - `column_summary.csv`
@@ -90,97 +100,16 @@ Main output files:
 - `hist_*.png`
 - `bar_*.png`
 - `words_*.png`
-- `correlation_matrix.png`
-- `top_locations.png`
-- `worker_sub_type.png`
-- `job_profiles.png`
-- `openings_by_location.png`
-- `openings_by_job_profile.png`
-- `avg_days_open_by_location.png`
-- `avg_days_open_by_job_profile.png`
+- business charts such as location, openings, and job profile summaries
 
-### Run `DataOverview.py`
+## Simple Difference
 
-Use:
-
-```bash
-python DataOverview.py your_file.csv
-```
-
-Or specify the target column manually:
-
-```bash
-python DataOverview.py your_file.csv target_column_name
-```
-
-Example:
-
-```bash
-python DataOverview.py titanic.csv Survived
-```
-
-What it does:
-
-- loads the CSV file
-- prints a quick overview of the dataset
-- saves missing-value and numeric distribution charts
-- picks a target column automatically if you do not provide one
-- detects whether the target looks like classification or regression
-- preprocesses numeric and categorical features
-- trains a baseline random forest model
-- prints evaluation metrics
-- saves feature importance outputs when available
-
-Main output files:
-
-- `missing_values.png`
-- `hist_*.png`
-- `feature_importance.csv`
-- `feature_importance.png`
-
-## Recommended Workflow
-
-If you are starting with a new dataset, use this order:
-
-1. Run `BusinessAnalytics.py` first.
-2. Review the generated charts and summary CSV files.
-3. Decide which column would make a good prediction target.
-4. Run `DataOverview.py` with that target column.
-5. Review the model metrics and feature importance results.
-
-## Example Use Cases
-
-For hiring or HR data:
-
-- `BusinessAnalytics.py` helps you understand demand by location, job profile, worker subtype, and time open.
-- `DataOverview.py` helps you test whether a column like `DAYS_OPEN`, `MANAGEMENT_LEVEL_JOB_REQUISITION`, or another field can be predicted from the rest of the data.
-
-For general datasets:
-
-- `BusinessAnalytics.py` gives you quick exploratory analysis.
-- `DataOverview.py` gives you a simple first-pass ML model.
+- `HRcleaner.py` prepares the data.
+- `businessanaylics.py` explains the data.
 
 ## Notes
 
-- Both scripts expect a CSV file as input.
-- Output files are saved in the current working directory.
-- Some charts only appear when the needed columns exist in the dataset.
-- `DataOverview.py` uses a basic model for speed and simplicity, not final production accuracy.
-
-## Troubleshooting
-
-If you get `Could not find file`, check that:
-
-- the CSV file path is correct
-- you are running the command from the correct folder
-
-If the model results look weak:
-
-- try choosing a better target column manually
-- clean the dataset more before training
-- check for too many missing values or low-quality categories
-
-If business charts are missing:
-
-- your dataset may not contain columns like `PRIMARY_LOCATION`, `JOB_PROFILE`, `WORKER_SUB_TYPE`, `DAYS_OPEN`, or `NUMBER_OF_OPENINGS_AVAILABLE`
+- Both programs expect CSV input.
+- Output files are saved in the current working directory unless the script says otherwise.
+- Some outputs depend on which columns exist in the dataset.
 
