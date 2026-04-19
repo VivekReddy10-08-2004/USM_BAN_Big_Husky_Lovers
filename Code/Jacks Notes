@@ -1,0 +1,45 @@
+Jack Bergin
+4/19/2026
+
+Worked on Data Cleaning,
+
+ChatGpt - Provided Business Analytics and HRcleaner as Basic analytic tools. More info in ReadME.
+
+
+Objective: Write a Python script (the "Pipeline") that ingests the raw Open Reqs Mar 2026_2026-04-01.csv ( available in our repo and outputs a Cleaned_ML_Ready.csv.
+Task 1: Feature Extraction (The DAYS_OPEN String) • The Problem: DAYS_OPEN is currently an object/string formatted as "236 days ago". Machine learning models cannot read this. • The Fix: Write a Regex or string manipulation function to strip " days ago" from every row. • Output: Cast the remaining number into an int64 type.
+Task 2: Handle the Nulls in the Target Variable • The Problem: MANAGEMENT_LEVEL_JOB_REQUISITION has 5 missing values (211 non-nulls out of 216 rows). Since this is a critical categorical feature, nulls will crash the scikit-learn models. • The Fix: * Option A: If those 5 rows are missing random data, drop them (df.dropna(subset=['MANAGEMENT_LEVEL_JOB_REQUISITION'])). 
+• Option B: Impute them with a placeholder like "Uncategorized" so the clustering algorithm can still process them.
+Task 3: Text Preprocessing (Prep for NLP) • The Problem: The JOB_DESCRIPTION and JOB_PROFILE_SUMMARY columns contain raw, messy text with punctuation, newline characters, and varied casing. If you run TF-IDF on this directly, it will treat "Science." and "science" as two different variables. • The Fix: Create a text-cleaning function that applies to these two columns:
+Convert all text to lowercase.
+Remove all special characters and punctuation using Regex ([^\w\s]).
+Strip extra white spaces and newline tags (\n).
+• Output: Two new columns: CLEANED_JOB_DESCRIPTION and CLEANED_PROFILE_SUMMARY. Task 4: Categorical Encoding (The "Dictionary" Build) • The Problem: The models need numbers, not words. • The Fix: Map the string categories to numeric codes. • PRIMARY_LOCATION (e.g., US = 0, GB = 1) • WORKER_SUB_TYPE (e.g., Regular = 0, Agency = 1) • MANAGEMENT_LEVEL_JOB_REQUISITION (e.g., Expert Contributor = 0, Business Leader = 1, etc.) 
+• Output: Create a separate dictionary or metadata JSON file mapping these numeric codes back to the original strings. You will need this later so the Finance lead can map your predictions back into readable Power BI visuals. Task 5:Pipeline Architecture & Handoff • The Fix: Wrap all these cleaning steps into a single, modular Python class or pipeline function (e.g., def clean_hr_data(filepath):). 
+• Output: The script must generate a finalized Cleaned_ML_Ready.csv containing only integers, floats, and cleaned text strings.
+Make sure you make a doc and store all AI prompts you’ve used to generate what you made
+
+
+
+Create readme explaining use of these python programs that any business could understand in order to implement the provided programs.
+
+
+
+Claude Opus 4.6
+
+"How can i improve this for a dataset needing set requirments" — (with the original HRcleaner.py attached)
+
+"more of a information retrevial or eda scheme"
+
+"where's the file"
+
+"review this" — (with the enhanced hr_cleaner_eda.py attached)
+"yes fix with set priorities"
+"bash to run it?"
+
+"Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified..." — asking what the warning meant
+
+"Project Overview... include ur new program in the readme" — (with the full README text pasted)
+
+The ML pipeline diagram upload + "build worktree and implementation plan"
+
