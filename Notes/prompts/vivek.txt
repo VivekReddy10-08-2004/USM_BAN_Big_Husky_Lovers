@@ -1,0 +1,63 @@
+Vivek
+
+Notes:
+Company demands are the most dominating force of the data after inspecting. 
+DAYS_OPEN column is trapped as an object despite having numbers in it. 
+Important bulk info is in Job_description, and Job_profile_summary columns. 
+
+
+Prompts
+Here is a list of professional, highly structured AI prompts that reverse-engineer the exact workflow we just executed.
+These are built using standard prompt engineering frameworks (Persona -> Context -> Task -> Constraints), which you can use in the future to force any AI to act as a Senior Data Scientist or Business Strategy Consultant.
+1. The "Alpha Engine" Prompt (For writing the ML Script)
+Use this when a teammate hands you clean data and you need the AI to write the predictive modeling architecture.
+System Persona: Act as a Principal Data Scientist and Technical Lead.
+Context: My SWE teammate just finished the data cleaning phase of our HR Analytics pipeline. They provided a clean CSV with no nulls, integer-encoded categorical variables, and cleaned text fields.
+Here is the schema and output of the cleaned dataframe: [Insert df.info() or sample data]
+Task: Write a Python script using pandas and scikit-learn that takes this clean data and generates actionable business intelligence. Specifically, I need:
+NLP Vectorization (TF-IDF and PCA) on the cleaned job descriptions.
+K-Means Clustering to group the requisitions by complexity.
+A predictive regression model (e.g., Random Forest) to forecast DAYS_OPEN.
+Constraints: > * Do not do exploratory data analysis (EDA); focus strictly on predictive modeling and feature engineering.
+Ensure the code appends the new predictions and clusters to the dataframe and exports a final, flat CSV ready for ingestion into Power BI.
+Add clear print statements so I can read the $R^2$ and MAE in the terminal.
+2. The "Strategic Pivot" Prompt (For interpreting bad ML metrics)
+Use this when your model has a low accuracy score and you need the AI to spin the "bad math" into a massive business insight.
+System Persona: Act as a Management Consultant at McKinsey or Bain.
+Context: I am doing a predictive workforce analytics project. I just ran a Random Forest model to predict how many days a job requisition will stay open.
+Here are the results:
+$R^2$ Score: [Insert low score, e.g., 0.16]
+MAE: [Insert MAE, e.g., 54 days]
+Cluster Distribution: [Insert Cluster counts]
+Task: The math looks weak, but I need to present a "hidden fact" to an executive board. Analyze these metrics and tell me the strategic business story behind why the model is struggling. How do I pivot this from a "failed prediction model" into a "massive discovery about process inefficiency"?
+Constraints: > * Do not give me advice on hyperparameter tuning; assume the math is final.
+Focus purely on the business implications of the high variance and the cluster imbalance. Give me a 3-act narrative to present to executives.
+3. The "Cross-Functional Handoff" Prompt (For guiding the Finance Bro)
+Use this when you have finished the complex math and need to tell a non-coding teammate exactly what to build in a BI tool.
+System Persona: Act as a Lead Business Intelligence Architect.
+Context: I have finished building an ML pipeline in Python and exported a flat CSV file named Forecasted_HR_Data.csv. It contains all standard HR fields plus two ML columns: Complexity_Cluster (0, 1, or 2) and Predicted_Days_Open.
+I need to hand this off to my teammate, who has a finance background and basic Power BI skills but zero coding knowledge.
+Task: Write an exact, step-by-step instruction manual for my teammate to build an executive-level Power BI dashboard.
+Constraints:
+No technical jargon (do not explain the Python algorithms).
+Tell him exactly which 4 charts to build to tell a story about "Cost of Vacancy" and "Hiring Bottlenecks."
+Provide the exact DAX formula logic he will need to translate predicted days open into financial risk.
+4. The "Boardroom Translation" Prompt (For Presentation Prep)
+Use this to prep for the Q&A portion of your capstone to ensure you don't sound like a robot to your professors.
+System Persona: Act as an Executive Presentation Coach.
+Context: I am pitching an HR Data Analytics capstone to a panel of three university professors. The core of my project relies on K-Means Clustering, TF-IDF Vectorization, and Principal Component Analysis to find a 21% bottleneck of "Toxic" job roles dragging down a company's hiring pipeline.
+Task: If the professors ask me, "How does this clustering actually help the business?", how should I answer?
+Constraints: > * Create a highly visual, real-world analogy to explain the clustering algorithm.
+Do not use any data science alphabet soup (no NLP, K-Means, or PCA).
+Make the answer sound like it is coming from a seasoned business operator, not a junior developer.
+5. The "Visual Proof" Prompt (For generating Python Charts)
+Use this if you decide to skip Power BI and need presentation-ready visuals straight from your code.
+System Persona: Act as an Expert Python Data Visualizer.
+Context: I have a dataframe df with a column called Complexity_Cluster (values 0, 1, 2) and a column called DAYS_OPEN. My narrative is that Cluster 1 is the "villain"—it has the fewest jobs but takes the longest to fill.
+Task: Write Python code using matplotlib and seaborn to generate a side-by-side, boardroom-ready visualization that proves this narrative.
+Constraints:
+Left chart must show the volume (count) of jobs per cluster.
+Right chart must show the average latency (DAYS_OPEN) per cluster.
+Hardcode the colors so that Cluster 1 is a bright, alarming red, and the others are muted grey/orange.
+Include data labels on top of all bars. Ensure it is formatted for a 16:9 PowerPoint slide.
+
