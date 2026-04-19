@@ -1,0 +1,300 @@
+{
+  "numeric_columns": {
+    "DAYS_OPEN": {
+      "dtype": "int64",
+      "count": 216,
+      "nulls": 0,
+      "mean": 74.3981,
+      "median": 42.0,
+      "std": 95.0537,
+      "min": -1.0,
+      "max": 889.0,
+      "q25": 22.0,
+      "q75": 85.0,
+      "skewness": 4.0338,
+      "kurtosis": 26.1861
+    },
+    "NUMBER_OF_OPENINGS_AVAILABLE": {
+      "dtype": "int64",
+      "count": 216,
+      "nulls": 0,
+      "mean": 0.8148,
+      "median": 1.0,
+      "std": 0.5481,
+      "min": 0.0,
+      "max": 4.0,
+      "q25": 1.0,
+      "q75": 1.0,
+      "skewness": 0.7771,
+      "kurtosis": 5.5762
+    },
+    "PRIMARY_LOCATION_CODE": {
+      "dtype": "int64",
+      "count": 216,
+      "nulls": 0,
+      "mean": 14.3241,
+      "median": 19.5,
+      "std": 6.8625,
+      "min": 0.0,
+      "max": 21.0,
+      "q25": 10.0,
+      "q75": 20.0,
+      "skewness": -0.8074,
+      "kurtosis": -0.7894
+    },
+    "WORKER_SUB_TYPE_CODE": {
+      "dtype": "int64",
+      "count": 216,
+      "nulls": 0,
+      "mean": 3.1157,
+      "median": 3.0,
+      "std": 0.6027,
+      "min": 0.0,
+      "max": 5.0,
+      "q25": 3.0,
+      "q75": 3.0,
+      "skewness": -0.9531,
+      "kurtosis": 6.9332
+    },
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": {
+      "dtype": "int64",
+      "count": 216,
+      "nulls": 0,
+      "mean": 2.1713,
+      "median": 2.0,
+      "std": 1.5502,
+      "min": 0.0,
+      "max": 6.0,
+      "q25": 1.0,
+      "q75": 3.0,
+      "skewness": 0.1417,
+      "kurtosis": -0.4526
+    }
+  },
+  "correlation_matrix": {
+    "DAYS_OPEN": {
+      "DAYS_OPEN": 1.0,
+      "NUMBER_OF_OPENINGS_AVAILABLE": -0.1419,
+      "PRIMARY_LOCATION_CODE": -0.0716,
+      "WORKER_SUB_TYPE_CODE": 0.0695,
+      "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": 0.1294
+    },
+    "NUMBER_OF_OPENINGS_AVAILABLE": {
+      "DAYS_OPEN": -0.1419,
+      "NUMBER_OF_OPENINGS_AVAILABLE": 1.0,
+      "PRIMARY_LOCATION_CODE": 0.0296,
+      "WORKER_SUB_TYPE_CODE": -0.1178,
+      "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": 0.0101
+    },
+    "PRIMARY_LOCATION_CODE": {
+      "DAYS_OPEN": -0.0716,
+      "NUMBER_OF_OPENINGS_AVAILABLE": 0.0296,
+      "PRIMARY_LOCATION_CODE": 1.0,
+      "WORKER_SUB_TYPE_CODE": -0.279,
+      "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": 0.2702
+    },
+    "WORKER_SUB_TYPE_CODE": {
+      "DAYS_OPEN": 0.0695,
+      "NUMBER_OF_OPENINGS_AVAILABLE": -0.1178,
+      "PRIMARY_LOCATION_CODE": -0.279,
+      "WORKER_SUB_TYPE_CODE": 1.0,
+      "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": -0.31
+    },
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": {
+      "DAYS_OPEN": 0.1294,
+      "NUMBER_OF_OPENINGS_AVAILABLE": 0.0101,
+      "PRIMARY_LOCATION_CODE": 0.2702,
+      "WORKER_SUB_TYPE_CODE": -0.31,
+      "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": 1.0
+    }
+  },
+  "categorical_columns": {
+    "JOB_REQUISITION": {
+      "dtype": "object",
+      "cardinality": 209,
+      "nulls": 0,
+      "top_5_values": {
+        "Senior Full Stack Engineer (Open)": 2,
+        "Systems Software Developer (Open)": 2,
+        "Veterinary Diagnostic Specialist (m/w/d) (Open)": 2,
+        "Virtual Clinical Pathologist (Evergreen) (Open)": 2,
+        "Medical Laboratory Tech (Evergreen) (Open)": 2
+      },
+      "null_percentage": 0.0
+    },
+    "WORKER_SUB_TYPE": {
+      "dtype": "object",
+      "cardinality": 6,
+      "nulls": 0,
+      "top_5_values": {
+        "Regular": 170,
+        "Regular (Fixed Term)": 35,
+        "Casual": 6,
+        "Temporary Employee (Fixed Term)": 3,
+        "Intern (Fixed Term)": 1
+      },
+      "null_percentage": 0.0
+    },
+    "PRIMARY_LOCATION": {
+      "dtype": "object",
+      "cardinality": 22,
+      "nulls": 0,
+      "top_5_values": {
+        "US": 106,
+        "DE": 19,
+        "GB": 18,
+        "NZ": 16,
+        "AU": 11
+      },
+      "null_percentage": 0.0
+    },
+    "JOB_PROFILE": {
+      "dtype": "object",
+      "cardinality": 116,
+      "nulls": 0,
+      "top_5_values": {
+        "Medical Laboratory Technician I": 23,
+        "Customer Support Consultant I": 10,
+        "Clinical Pathologist II": 8,
+        "Application Developer Sr I": 8,
+        "Veterinary Diagnostic Consultant Assoc": 6
+      },
+      "null_percentage": 0.0
+    },
+    "MANAGEMENT_LEVEL_JOB_REQUISITION": {
+      "dtype": "object",
+      "cardinality": 7,
+      "nulls": 0,
+      "top_5_values": {
+        "Expert Contributor": 61,
+        "Core Contributor": 61,
+        "Advanced Contributor": 52,
+        "Frontline Leader": 19,
+        "Mid-Level Leader": 10
+      },
+      "null_percentage": 0.0
+    },
+    "JOB_DESCRIPTION": {
+      "dtype": "object",
+      "cardinality": 106,
+      "nulls": 0,
+      "top_5_values": {
+        "PRIMARY DUTIES AND RESPONSIBILITIES: Specializes in one or more of the following areas: Hematology Testing cell-related components of blood samples to enumerate and identify their cellular components, including the microscopic evaluation of blood smears and the use of automated and manual counting techniques. Cytology Processing blood and body fluids for microscopic examination by pathologists.  Includes slide preparation and staining, utilizing manual and automated counting techniques. Urinalysis Analysis and evaluation of chemical and microscopic components of urine samples, using automated instrumentation and manual techniques. Chemistry/Endocrinology Testing blood and body fluids for various analytes, utilizing automated instrumentation. Parasitology Examining samples to identify parasites, utilizing fecal flotation and various microscopic techniques. Immunology/Serology Testing blood and other samples for the presence of viral and bacterial disease by detecting antibodies (AB) or antigens (AG). Microbiology Processing clinical samples for the identification of bacteria and fungi using automated and manual methods. PCR (Polymerase Chain Reaction) Examining samples for the presence of specific substances (often bacteria) using molecular diagnostic methods. Histology Processing tissue samples for Pathologists using grossing, embedding, microtomy, staining and special staining techniques.  Assures accurate and timely delivery of casework (and collateral materials) to on-site & off-site pathologists.  May be responsible for maintaining and troubleshooting virtual microscopy (VM) systems which provide remote viewing & digital slide analysis capability to pathologists; organizes and archives pending and completed VM cases; creates and maintains VM system standard operating procedures; tracks VM system errors; troubleshoots VM system problems with pathologists, labs, vendors, IT and others; runs regular meetings and meets with vendors; sets up and trains users; and other related activities. Diagnostic Evaluation Performing postmortem examinations, including sample collection and preparation for serology, microbiology, parasitology, histology, molecular biology (PCR) and other tests.  Preparing samples for analysis and performs parasitological and other exams Performing variety of customer service activities for internal and external customers, providing information, resolving issues and ensuring customer satisfaction. Responding to customer phone and other communications, addresses questions/issues/problems/concerns, etc. Reliable and dependable attendance is an essential function of the position. Adherence to attendance-related policies and expectations is critical to this position. EDUCATION: High School diploma or equivalent combination of education and experience required. Bachelors degree or equivalent preferred. REQUIRED SKILLS AND ABILITIES: Laboratory skills, with experience setting up, running and reading lab tests and operating lab instruments. General science background, including hematology/chemistry helpful. Attention to detail. Organized with ability to multi-task in a fast paced environment. Ability to work independently and as part of a team. Communication skills, both verbal and written. Positive, can-do attitude. Knowledge of Good Clinical Practice (GCP) as appropriate. Supervisory skills, if a lead position. Personal computer skills, including strong typing ability and proficient use of Microsoft Office. CERTIFICATIONS: Registered Veterinary Technician (RVT), Certified Veterinary Technician (CVT), Licensed Veterinary Technician (LVT), or equivalent preferred. PHYSICAL DEMANDS: Extensive sitting, phone and computer use. May be required to lift, move and carry up to 50 pounds. Specific vision abilities required include close vision, color vision, depth perception, and the ability to adjust focus. Hearing acuity sufficient to effectively communicate with customers and Employees via telephone and in person. Ability to communicate verbally on phone and in person. Fluency in the English language. Extended hours may be required. Some travel required. WORK ENVIRONMENT: Laboratory environment with potential biohazards present. Potential for exposure to agents known to cause zoonotic disease in humans and use of potentially hazardous chemicals as defined by the National Hazard Communication Standards. A complete list of such chemicals is available from department supervision. LEVELING GUIDE: Sets up and runs lab tests.  Reads and releases test results.  Tests performed may be more routine and less complex.  Exercises judgment in evaluating and reporting results in consultation with veterinarians/pathologists and others.  Performs equipment maintenance activities.  Knowledge of lab equipment and procedures.  Awareness of quality control and calibration.  Developing knowledge of multiple specialties.  Works under close to moderate supervision with limited latitude for independent judgment.  Consult with senior peers on non-complex tasks to learn through experience.  Normally receives general instructions on routine work, detailed instructions on new assignments.  Basic skills and proficiency (may sacrifice speed for accuracy until proficiency grows).  Applies job skills and lab policies and procedures to complete a variety of tasks.  Works on tasks that are semi-routine in nature where ability to recognize deviation from accepted practice is required.  May be cross trained and perform specimen processing responsibilities.  Certification as a Veterinary Technician (RVT, LVT, CVT – Registered, Licensed or Certified through American Veterinary Medical Association accredited program-AVMA) or Medical Laboratory Technician (MLT) (American Society of Clinical Pathology-ASCP), Histotechnician for histology-specific (HT) (ASCP) or military equivalent a plus. For customer service-related responsibilities (only if these are assigned), familiarity with customer service, technically-related fields, veterinary practices or lab experience preferred. For virtual microscopy (VM)-related responsibilities (only if these are assigned),   familiarity with VM equipment, answers basic and escalates more complex questions and troubleshoots basic equipment repairs.  Developing ability at diagnosing, trouble-shooting and resolving technical issues. Typically 0-1+ Year Exp.": 23,
+        "PRIMARY DUTIES AND RESPONSIBILITIES: Provides customer technical support for one or more Company products or services, including pet and other animal health care-related products for veterinarians, medical diagnostic and water-testing equipment and other products and services. Support may consist of answering customer questions, explaining products and services, instructing in use of equipment, coordinating and assisting with equipment installations, configuring computer system hardware or software, troubleshooting and repairing system, database or data communication issues, customer order entry and billing or other priorities. Determines customer needs, researches and provides solutions, coordinating with other team members as needed. Ensures ongoing customer satisfaction and continuing strong customer relationships. Supports quality management system and other compliance requirements. EDUCATION: High School diploma or equivalent combination of education and experience required. Associates degree, Bachelors degree or equivalent preferred. REQUIRED SKILLS AND ABILITIES: High quality customer facing inter-personal skills, with experience working with customers and maintaining good customer relationships. Technical record keeping management skills. Reasoning and analytical skills to resolve issues. Phone skills, with ability to establish rapport. Attention to detail. Organized with ability to multi-task. Ability to work independently and as part of a team. Supervisory skills, if a lead position. Communication skills, both verbal and written, including ability to communicate complex technical issues to technical and non-technical users in a professional, positive, friendly and understandable manner. Personal computer skills, including Microsoft Office. PHYSICAL DEMANDS: Extensive sitting, phone and computer use. May be required to lift, move and carry up to 50 pounds. Specific vision abilities required include close vision, color vision, depth perception, and the ability to adjust focus. Hearing acuity sufficient to effectively communicate with customers and Employees via telephone and in person. Ability to communicate verbally on phone and in person. Fluency in the English language. Extended hours may be required. Some travel required. WORK ENVIRONMENT: Laboratory environment with potential biohazards present. Potential for exposure to agents known to cause zoonotic disease in humans and use of potentially hazardous chemicals as defined by the National Hazard Communication Standards. A complete list of such chemicals is available from department supervision. LEVELING GUIDE: Has developed skills through training or experience. Performs most established procedures and will typically be considered semi-skilled through on-the-job experience. Work typically involves prescribed processes with opportunity for creativity and judgment within established procedures with a moderate degree of supervision. Resolves routine issues with senior staff or supervisory guidance and approval.": 10,
+        "PRIMARY DUTIES AND RESPONSIBILITIES: Increase the diagnostic revenue year over year in a specific territory Translate customer needs into diagnostic solutions. Sell diagnostic equipment, tests and services to customers. Increase utilization of in-house diagnostic tests & assays, instrument consumables and reference laboratory profiles & advanced tests for territory customer base. Achieve quarterly and annual revenue and growth goals through new account acquisition and existing account development. Utilize IDEXX specialists to assist with acquiring new business as appropriate Educate and train veterinary clinic staff on products, services & marketing initiatives, including elevating issues to customer service when appropriate. Develop and grow partnerships with veterinary practice staff. Represent IDEXX mission, values and principles in all dealings with customers and markets. Present IDEXX values to customers in a professional manner; including understanding the industry, veterinary practice, customers, technology, operations, and processes. Complete all sales administration, including completing all Beacon requirements & territory management activities. Attend trade shows and other educational events. Achieve and maintain medical & technical knowledge and verbal fluency of industry and IDEXX products and services. Manage territory for optimal account coverage, including quality account planning. Define and verify customer needs and expectations. Communicate customer needs/issues to marketing organization and business unit manager, including recommendations of modifying service levels to current accounts. Communicate competitive issues to marketing organization and business unit manager. Partner, coordinate and assist laboratory operations to facilitate/handle customer questions and/or service issues. Manage IDEXX expenses and resources in line with company guidelines and directives. EDUCATION: Bachelors degree or equivalent combination of education and experience required. REQUIRED SKILLS AND ABILITIES: Demonstrated strong sales and closing skills. Documented track record of success in achieving sales goals. Strong communication skills with the ability to influence and negotiate with customers, co-workers and peers. Demonstrated ability to develop, grow and manage customer relationships. Customer Relationship Management skills a plus Ability to understand customer needs and develop customer specific solutions. Utilizes creativity in problem solution, works easily with team partners to solve customer needs. Must be professionally mature, and able to adapt to independent and team-oriented environment. Must possess a passion for business with the drive to achieve results. Integrity, keeping commitments to colleagues, customers and the company. Able to demonstrate modeling and authentic support for IDEXX mission, values and principles. Solid computer skills and ability to utilize sales information management databases. Strong interpersonal skills – ability to build strong customer relationships, and build outstanding relationships with customers & colleagues. Strong collaboration & teamwork skills. Detailed and organized with the ability to multi-task. Solid analytical skills with the ability to analyze and understand customer sales data. Knowledge of veterinary industry and/or veterinary diagnostics preferred. Must possess a valid driver’s license. PHYSICAL DEMANDS: Overnight travel Some weekend work Extensive car travel Ability to lift up to 60 pounds WORK ENVIRONMENT: Exposure to veterinary clinics LEVELING GUIDE: Some field sales experience and/or equivalent inside sales experience Requires demonstrated sales and customer relationship skills. Requires solid knowledge of IDEXX products and services and/or equivalent external experience Grows and develops strong customer relationships. Applies company policies and procedures to resolve a variety of issues. Requires knowledge and experience in own discipline; acquiring higher level knowledge and skills. Builds knowledge of the organization, processes and customers. Solves a range of problems. Analyzes and recommends possible solutions. Receives a moderate level of guidance and direction as needed. Typically 3-5 years field and/or equivalent inside sales experience. Relevant sales experience preferred. Scientific medical and/or technical background, training, and/or experience preferred. Experience in a Veterinary Clinic a plus.": 8,
+        "PRIMARY DUTIES AND RESPONSIBILITIES: Responsible for gross and/or microscopic examination of clinical or anatomic pathology specimens and preparation of pathology reports in a timely manner. Meet caseload and turnaround expectations. Responsible for providing telephone consultations to clients. Consult with and assist other pathologists as needed to promote collegiality. Interact with, advise and assist laboratory personnel in proper specimen processing techniques and function as the pathologist on duty. Promote the growth of IDEXX by actively participating in pathologist meetings and developing and maintaining professional relationships/contact with clients. Participate in the quality control programs. Maintain proficiency and develop diagnostic skills through regular continuing        education. Time may be provided off of routine diagnostic responsibilities to allow the pathologist to engage in other professional activities as approved by management. Such activities should improve the function or professional reputation of IDEXX. EDUCATION: Doctor of Veterinary Medicine (DVM) required. REQUIRED SKILLS AND ABILITIES: Familiarity with current topics and issues in clinical veterinary medicine. Ability to type and use dictation equipment. Excellent verbal and communication skills. A service oriented attitude. Ability to organize and prioritize work. Computer skills are required CERTIFICATIONS: Pathology Board        Certified - American College of Veterinary Pathology (ACVP) or ECVP preferred. PHYSICAL DEMANDS: Extensive sitting and computer use WORK ENVIRONMENT: This position involves potential for exposure to agents known to cause zoonotic disease and the use of hazardous materials (i.e., formalin, xylene). The pathologist may be responsible for periodic Saturday duty. LEVELING GUIDE: Board eligible with a minimum of 3 years’ experience in a diagnostic field. Demonstrates effective communication and interpersonal capabilities. Solves complex problems or problems that do not have routine solutions with assistance. Works independently with guidance in only the most complex        situations.": 8,
+        "PRIMARY DUTIES AND RESPONSIBILITIES: Designs, codes, tests, debugs and documents programs based on technical configurations developed by analysts and project teams. Estimates and tracks time required to complete work, for project budgeting and financial tracking. Develops program designs to meet technical configurations, ensuring that resulting systems will operate efficiently and reliably. Understands business function supported by the application to encompass within design framework. Ensures design integrates with other related systems. Codes programs using various programming languages as appropriate. Tests and debugs programs to finalize and ensure smooth operation. Documents program design, coding and other details to guide others in application development, use and maintenance. Supports, updates and maintains existing systems in response to business needs, system problems or other factors. Coordinates with project teams to design, code, test and document system changes. Coordinates with project team members to define application requirements. Identifies business needs, assesses available technologies and develops and presents solutions. Provides high level of customer service, partners with end users in the resolution of problems or in deployment of new applications. May design system architectures. EDUCATION: Bachelors degree or equivalent combination of education and experience required. REQUIRED SKILLS AND ABILITIES: Familiarity with relational databases and Structured Query Language (SQL). Ability to leverage technology background and understanding of latest technologies to apply to development work. Understanding of procedural and object oriented design. Experience with Advanced Business Applications Programming (ABAP), Java, Visual Basic and/or other object oriented and procedural programming languages as appropriate to specialty. Familiarity with applications development process. Familiarity with software development methodologies as required by associated development team. General business knowledge required. Excellent problem solving skills required. Excellent customer service and business relationship-building skills required. Project management skills required. Microsoft Desktop tools Ability to work independently and in teams. Fluency in the English language. Strong communication skills, both verbal and written, including ability to translate technical subject matter to non-technical audiences (both as a speaker and listener). PHYSICAL DEMANDS: Extensive sitting, phone and computer use. Some travel may be required. WORK ENVIRONMENT: General office environment. Normal office noise level, with occasional moderate noise. LEVELING GUIDE: Takes features from requirement to solution. Emphasis on designing solutions. Higher-level analytical skills in taking business requirements and creating design solutions. Analyzes different design approaches and makes appropriate recommendations. Begins mentoring other developers. Familiarity with higher-level development concepts, such as threading and transactional controls. Demonstrated experience with design patterns. Possesses functional knowledge of businesses supported. Experience implementing several industry standard development frameworks. Demonstrated high-level knowledge of a single technical area. Knowledge in other areas at a lesser level. Works with developers on other software teams to implement cross-product software solutions. Typically 5+ years’ related experience.": 8
+      },
+      "null_percentage": 0.0
+    },
+    "JOB_PROFILE_SUMMARY": {
+      "dtype": "object",
+      "cardinality": 63,
+      "nulls": 0,
+      "top_5_values": {
+        "Performs laboratory analyses and tests. Prepares samples, sets up instruments, runs tests and reads, interprets and releases results. May perform variety of customer service activities for internal and external customers.": 27,
+        "Create relationships with customers through knowledgeable interactions, business discussions and educational interactions. Acquire new business in existing customer base and acquire new customers leading to an overall increase in the territory revenue. Help build customer loyalty through the effective use of IDEXX products & services including in-house and reference laboratory diagnostic solutions in the customer’s practice. The selling focus will be on a customer centric approach to help practices grow their diagnostic revenue with IDEXX as a high value partner.": 17,
+        "Performing variety of customer service activities for internal and external customers, providing information, resolving issues and ensuring customer satisfaction. Responding to customer phone and other communications, addresses questions/issues/problems/concerns.": 12,
+        "The majority of the pathologist’s duties involves, but is not limited to, providing clients with diagnostic evaluations in the area of clinical or anatomic pathology and providing necessary follow-up consultation. A high level of importance is placed on quality, timeliness, customer service, effective verbal, written and interpersonal communication skills.": 12,
+        "Manages activities in a business unit/group/area/function/program. Manages staff, assigning work and evaluating results. Supports the development of unit/group/area/function/program budget, operating policies and procedures.": 11
+      },
+      "null_percentage": 0.0
+    },
+    "CLEANED_JOB_DESCRIPTION": {
+      "dtype": "object",
+      "cardinality": 104,
+      "nulls": 0,
+      "top_5_values": {
+        "primary duties and responsibilities specializes in one or more of the following areas hematology testing cell related components of blood samples to enumerate and identify their cellular components including the microscopic evaluation of blood smears and the use of automated and manual counting techniques cytology processing blood and body fluids for microscopic examination by pathologists includes slide preparation and staining utilizing manual and automated counting techniques urinalysis analysis and evaluation of chemical and microscopic components of urine samples using automated instrumentation and manual techniques chemistry endocrinology testing blood and body fluids for various analytes utilizing automated instrumentation parasitology examining samples to identify parasites utilizing fecal flotation and various microscopic techniques immunology serology testing blood and other samples for the presence of viral and bacterial disease by detecting antibodies ab or antigens ag microbiology processing clinical samples for the identification of bacteria and fungi using automated and manual methods pcr polymerase chain reaction examining samples for the presence of specific substances often bacteria using molecular diagnostic methods histology processing tissue samples for pathologists using grossing embedding microtomy staining and special staining techniques assures accurate and timely delivery of casework and collateral materials to on site off site pathologists may be responsible for maintaining and troubleshooting virtual microscopy vm systems which provide remote viewing digital slide analysis capability to pathologists organizes and archives pending and completed vm cases creates and maintains vm system standard operating procedures tracks vm system errors troubleshoots vm system problems with pathologists labs vendors it and others runs regular meetings and meets with vendors sets up and trains users and other related activities diagnostic evaluation performing postmortem examinations including sample collection and preparation for serology microbiology parasitology histology molecular biology pcr and other tests preparing samples for analysis and performs parasitological and other exams performing variety of customer service activities for internal and external customers providing information resolving issues and ensuring customer satisfaction responding to customer phone and other communications addresses questions issues problems concerns etc reliable and dependable attendance is an essential function of the position adherence to attendance related policies and expectations is critical to this position education high school diploma or equivalent combination of education and experience required bachelors degree or equivalent preferred required skills and abilities laboratory skills with experience setting up running and reading lab tests and operating lab instruments general science background including hematology chemistry helpful attention to detail organized with ability to multi task in a fast paced environment ability to work independently and as part of a team communication skills both verbal and written positive can do attitude knowledge of good clinical practice gcp as appropriate supervisory skills if a lead position personal computer skills including strong typing ability and proficient use of microsoft office certifications registered veterinary technician rvt certified veterinary technician cvt licensed veterinary technician lvt or equivalent preferred physical demands extensive sitting phone and computer use may be required to lift move and carry up to 50 pounds specific vision abilities required include close vision color vision depth perception and the ability to adjust focus hearing acuity sufficient to effectively communicate with customers and employees via telephone and in person ability to communicate verbally on phone and in person fluency in the english language extended hours may be required some travel required work environment laboratory environment with potential biohazards present potential for exposure to agents known to cause zoonotic disease in humans and use of potentially hazardous chemicals as defined by the national hazard communication standards a complete list of such chemicals is available from department supervision leveling guide sets up and runs lab tests reads and releases test results tests performed may be more routine and less complex exercises judgment in evaluating and reporting results in consultation with veterinarians pathologists and others performs equipment maintenance activities knowledge of lab equipment and procedures awareness of quality control and calibration developing knowledge of multiple specialties works under close to moderate supervision with limited latitude for independent judgment consult with senior peers on non complex tasks to learn through experience normally receives general instructions on routine work detailed instructions on new assignments basic skills and proficiency may sacrifice speed for accuracy until proficiency grows applies job skills and lab policies and procedures to complete a variety of tasks works on tasks that are semi routine in nature where ability to recognize deviation from accepted practice is required may be cross trained and perform specimen processing responsibilities certification as a veterinary technician rvt lvt cvt registered licensed or certified through american veterinary medical association accredited program avma or medical laboratory technician mlt american society of clinical pathology ascp histotechnician for histology specific ht ascp or military equivalent a plus for customer service related responsibilities only if these are assigned familiarity with customer service technically related fields veterinary practices or lab experience preferred for virtual microscopy vm related responsibilities only if these are assigned familiarity with vm equipment answers basic and escalates more complex questions and troubleshoots basic equipment repairs developing ability at diagnosing trouble shooting and resolving technical issues typically 0 1 year exp": 23,
+        "primary duties and responsibilities provides customer technical support for one or more company products or services including pet and other animal health care related products for veterinarians medical diagnostic and water testing equipment and other products and services support may consist of answering customer questions explaining products and services instructing in use of equipment coordinating and assisting with equipment installations configuring computer system hardware or software troubleshooting and repairing system database or data communication issues customer order entry and billing or other priorities determines customer needs researches and provides solutions coordinating with other team members as needed ensures ongoing customer satisfaction and continuing strong customer relationships supports quality management system and other compliance requirements education high school diploma or equivalent combination of education and experience required associates degree bachelors degree or equivalent preferred required skills and abilities high quality customer facing inter personal skills with experience working with customers and maintaining good customer relationships technical record keeping management skills reasoning and analytical skills to resolve issues phone skills with ability to establish rapport attention to detail organized with ability to multi task ability to work independently and as part of a team supervisory skills if a lead position communication skills both verbal and written including ability to communicate complex technical issues to technical and non technical users in a professional positive friendly and understandable manner personal computer skills including microsoft office physical demands extensive sitting phone and computer use may be required to lift move and carry up to 50 pounds specific vision abilities required include close vision color vision depth perception and the ability to adjust focus hearing acuity sufficient to effectively communicate with customers and employees via telephone and in person ability to communicate verbally on phone and in person fluency in the english language extended hours may be required some travel required work environment laboratory environment with potential biohazards present potential for exposure to agents known to cause zoonotic disease in humans and use of potentially hazardous chemicals as defined by the national hazard communication standards a complete list of such chemicals is available from department supervision leveling guide has developed skills through training or experience performs most established procedures and will typically be considered semi skilled through on the job experience work typically involves prescribed processes with opportunity for creativity and judgment within established procedures with a moderate degree of supervision resolves routine issues with senior staff or supervisory guidance and approval": 10,
+        "primary duties and responsibilities designs codes tests debugs and documents programs based on technical configurations developed by analysts and project teams estimates and tracks time required to complete work for project budgeting and financial tracking develops program designs to meet technical configurations ensuring that resulting systems will operate efficiently and reliably understands business function supported by the application to encompass within design framework ensures design integrates with other related systems codes programs using various programming languages as appropriate tests and debugs programs to finalize and ensure smooth operation documents program design coding and other details to guide others in application development use and maintenance supports updates and maintains existing systems in response to business needs system problems or other factors coordinates with project teams to design code test and document system changes coordinates with project team members to define application requirements identifies business needs assesses available technologies and develops and presents solutions provides high level of customer service partners with end users in the resolution of problems or in deployment of new applications may design system architectures education bachelors degree or equivalent combination of education and experience required required skills and abilities familiarity with relational databases and structured query language sql ability to leverage technology background and understanding of latest technologies to apply to development work understanding of procedural and object oriented design experience with advanced business applications programming abap java visual basic and or other object oriented and procedural programming languages as appropriate to specialty familiarity with applications development process familiarity with software development methodologies as required by associated development team general business knowledge required excellent problem solving skills required excellent customer service and business relationship building skills required project management skills required microsoft desktop tools ability to work independently and in teams fluency in the english language strong communication skills both verbal and written including ability to translate technical subject matter to non technical audiences both as a speaker and listener physical demands extensive sitting phone and computer use some travel may be required work environment general office environment normal office noise level with occasional moderate noise leveling guide takes features from requirement to solution emphasis on designing solutions higher level analytical skills in taking business requirements and creating design solutions analyzes different design approaches and makes appropriate recommendations begins mentoring other developers familiarity with higher level development concepts such as threading and transactional controls demonstrated experience with design patterns possesses functional knowledge of businesses supported experience implementing several industry standard development frameworks demonstrated high level knowledge of a single technical area knowledge in other areas at a lesser level works with developers on other software teams to implement cross product software solutions typically 5 years related experience": 8,
+        "primary duties and responsibilities increase the diagnostic revenue year over year in a specific territory translate customer needs into diagnostic solutions sell diagnostic equipment tests and services to customers increase utilization of in house diagnostic tests assays instrument consumables and reference laboratory profiles advanced tests for territory customer base achieve quarterly and annual revenue and growth goals through new account acquisition and existing account development utilize idexx specialists to assist with acquiring new business as appropriate educate and train veterinary clinic staff on products services marketing initiatives including elevating issues to customer service when appropriate develop and grow partnerships with veterinary practice staff represent idexx mission values and principles in all dealings with customers and markets present idexx values to customers in a professional manner including understanding the industry veterinary practice customers technology operations and processes complete all sales administration including completing all beacon requirements territory management activities attend trade shows and other educational events achieve and maintain medical technical knowledge and verbal fluency of industry and idexx products and services manage territory for optimal account coverage including quality account planning define and verify customer needs and expectations communicate customer needs issues to marketing organization and business unit manager including recommendations of modifying service levels to current accounts communicate competitive issues to marketing organization and business unit manager partner coordinate and assist laboratory operations to facilitate handle customer questions and or service issues manage idexx expenses and resources in line with company guidelines and directives education bachelors degree or equivalent combination of education and experience required required skills and abilities demonstrated strong sales and closing skills documented track record of success in achieving sales goals strong communication skills with the ability to influence and negotiate with customers co workers and peers demonstrated ability to develop grow and manage customer relationships customer relationship management skills a plus ability to understand customer needs and develop customer specific solutions utilizes creativity in problem solution works easily with team partners to solve customer needs must be professionally mature and able to adapt to independent and team oriented environment must possess a passion for business with the drive to achieve results integrity keeping commitments to colleagues customers and the company able to demonstrate modeling and authentic support for idexx mission values and principles solid computer skills and ability to utilize sales information management databases strong interpersonal skills ability to build strong customer relationships and build outstanding relationships with customers colleagues strong collaboration teamwork skills detailed and organized with the ability to multi task solid analytical skills with the ability to analyze and understand customer sales data knowledge of veterinary industry and or veterinary diagnostics preferred must possess a valid driver s license physical demands overnight travel some weekend work extensive car travel ability to lift up to 60 pounds work environment exposure to veterinary clinics leveling guide some field sales experience and or equivalent inside sales experience requires demonstrated sales and customer relationship skills requires solid knowledge of idexx products and services and or equivalent external experience grows and develops strong customer relationships applies company policies and procedures to resolve a variety of issues requires knowledge and experience in own discipline acquiring higher level knowledge and skills builds knowledge of the organization processes and customers solves a range of problems analyzes and recommends possible solutions receives a moderate level of guidance and direction as needed typically 3 5 years field and or equivalent inside sales experience relevant sales experience preferred scientific medical and or technical background training and or experience preferred experience in a veterinary clinic a plus": 8,
+        "primary duties and responsibilities responsible for gross and or microscopic examination of clinical or anatomic pathology specimens and preparation of pathology reports in a timely manner meet caseload and turnaround expectations responsible for providing telephone consultations to clients consult with and assist other pathologists as needed to promote collegiality interact with advise and assist laboratory personnel in proper specimen processing techniques and function as the pathologist on duty promote the growth of idexx by actively participating in pathologist meetings and developing and maintaining professional relationships contact with clients participate in the quality control programs maintain proficiency and develop diagnostic skills through regular continuing education time may be provided off of routine diagnostic responsibilities to allow the pathologist to engage in other professional activities as approved by management such activities should improve the function or professional reputation of idexx education doctor of veterinary medicine dvm required required skills and abilities familiarity with current topics and issues in clinical veterinary medicine ability to type and use dictation equipment excellent verbal and communication skills a service oriented attitude ability to organize and prioritize work computer skills are required certifications pathology board certified american college of veterinary pathology acvp or ecvp preferred physical demands extensive sitting and computer use work environment this position involves potential for exposure to agents known to cause zoonotic disease and the use of hazardous materials i e formalin xylene the pathologist may be responsible for periodic saturday duty leveling guide board eligible with a minimum of 3 years experience in a diagnostic field demonstrates effective communication and interpersonal capabilities solves complex problems or problems that do not have routine solutions with assistance works independently with guidance in only the most complex situations": 8
+      },
+      "null_percentage": 0.0
+    },
+    "CLEANED_JOB_PROFILE_SUMMARY": {
+      "dtype": "object",
+      "cardinality": 61,
+      "nulls": 0,
+      "top_5_values": {
+        "performs laboratory analyses and tests prepares samples sets up instruments runs tests and reads interprets and releases results may perform variety of customer service activities for internal and external customers": 27,
+        "create relationships with customers through knowledgeable interactions business discussions and educational interactions acquire new business in existing customer base and acquire new customers leading to an overall increase in the territory revenue help build customer loyalty through the effective use of idexx products services including in house and reference laboratory diagnostic solutions in the customer s practice the selling focus will be on a customer centric approach to help practices grow their diagnostic revenue with idexx as a high value partner": 17,
+        "manages activities in a business unit group area function program manages staff assigning work and evaluating results supports the development of unit group area function program budget operating policies and procedures": 12,
+        "performing variety of customer service activities for internal and external customers providing information resolving issues and ensuring customer satisfaction responding to customer phone and other communications addresses questions issues problems concerns": 12,
+        "the majority of the pathologist s duties involves but is not limited to providing clients with diagnostic evaluations in the area of clinical or anatomic pathology and providing necessary follow up consultation a high level of importance is placed on quality timeliness customer service effective verbal written and interpersonal communication skills": 12
+      },
+      "null_percentage": 0.0
+    }
+  },
+  "text_analysis": {
+    "JOB_DESCRIPTION": {
+      "avg_char_length": 3902.0,
+      "max_char_length": 7359,
+      "min_char_length": 24,
+      "avg_word_count": 510.5,
+      "max_word_count": 951,
+      "nulls": 0,
+      "top_keywords": {
+        "ability": 1033,
+        "customer": 978,
+        "work": 861,
+        "skills": 817,
+        "experience": 603,
+        "required.": 589,
+        "required": 583,
+        "business": 576,
+        "knowledge": 502,
+        "including": 483,
+        "veterinary": 400,
+        "skills,": 373,
+        "strong": 372,
+        "technical": 364,
+        "equivalent": 361,
+        "computer": 342,
+        "and/or": 331,
+        "use": 316,
+        "communication": 282,
+        "issues": 282
+      }
+    },
+    "JOB_PROFILE_SUMMARY": {
+      "avg_char_length": 425.6,
+      "max_char_length": 1650,
+      "min_char_length": 49,
+      "avg_word_count": 54.6,
+      "max_word_count": 213,
+      "nulls": 0,
+      "top_keywords": {
+        "customer": 214,
+        "business": 118,
+        "activities": 100,
+        "idexx": 90,
+        "new": 84,
+        "technical": 81,
+        "variety": 77,
+        "customers": 73,
+        "diagnostic": 71,
+        "support": 70,
+        "development": 70,
+        "performs": 67,
+        "results.": 64,
+        "laboratory": 64,
+        "internal": 61,
+        "providing": 59,
+        "products": 57,
+        "sales": 55,
+        "services": 54,
+        "use": 53
+      }
+    }
+  },
+  "raw_vs_clean": {
+    "rows_raw": 216,
+    "rows_clean": 216,
+    "columns_raw": 9,
+    "columns_clean": 14,
+    "nulls_raw": 5,
+    "nulls_clean": 0
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "input_file": "Open Reqs Mar 2026_2026-04-01.csv",
+  "rows_initial": 216,
+  "columns_initial": [
+    "JOB_REQUISITION",
+    "WORKER_SUB_TYPE",
+    "DAYS_OPEN",
+    "PRIMARY_LOCATION",
+    "JOB_PROFILE",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION",
+    "NUMBER_OF_OPENINGS_AVAILABLE",
+    "JOB_DESCRIPTION",
+    "JOB_PROFILE_SUMMARY"
+  ],
+  "null_strategy": "impute",
+  "days_open_nulls_after_parse": 2,
+  "management_level_null_handling": {
+    "rows_before": 216,
+    "rows_after": 216,
+    "nulls_before": 5,
+    "nulls_after": 0,
+    "rows_removed": 0
+  },
+  "days_open_fill_value": -1,
+  "cleaned_text_columns": [
+    "CLEANED_JOB_DESCRIPTION",
+    "CLEANED_JOB_PROFILE_SUMMARY"
+  ],
+  "encoded_columns": [
+    "PRIMARY_LOCATION_CODE",
+    "WORKER_SUB_TYPE_CODE",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE"
+  ],
+  "final_dtypes": {
+    "JOB_REQUISITION": "object",
+    "WORKER_SUB_TYPE": "object",
+    "DAYS_OPEN": "int64",
+    "PRIMARY_LOCATION": "object",
+    "JOB_PROFILE": "object",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION": "object",
+    "NUMBER_OF_OPENINGS_AVAILABLE": "int64",
+    "JOB_DESCRIPTION": "object",
+    "JOB_PROFILE_SUMMARY": "object",
+    "CLEANED_JOB_DESCRIPTION": "object",
+    "CLEANED_JOB_PROFILE_SUMMARY": "object",
+    "PRIMARY_LOCATION_CODE": "int64",
+    "WORKER_SUB_TYPE_CODE": "int64",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": "int64"
+  },
+  "rows_final": 216,
+  "output_columns": [
+    "JOB_REQUISITION",
+    "WORKER_SUB_TYPE",
+    "DAYS_OPEN",
+    "PRIMARY_LOCATION",
+    "JOB_PROFILE",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION",
+    "NUMBER_OF_OPENINGS_AVAILABLE",
+    "JOB_DESCRIPTION",
+    "JOB_PROFILE_SUMMARY",
+    "CLEANED_JOB_DESCRIPTION",
+    "CLEANED_JOB_PROFILE_SUMMARY",
+    "PRIMARY_LOCATION_CODE",
+    "WORKER_SUB_TYPE_CODE",
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE"
+  ]
+}

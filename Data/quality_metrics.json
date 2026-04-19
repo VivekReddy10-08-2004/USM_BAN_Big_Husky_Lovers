@@ -1,0 +1,50 @@
+{
+  "completeness": {
+    "total_values_raw": 1944,
+    "total_values_clean": 3024,
+    "null_count_raw": 5,
+    "null_count_clean": 0,
+    "completeness_ratio": 100.0
+  },
+  "consistency": {
+    "duplicate_rows_raw": 0,
+    "duplicate_rows_clean": 0
+  },
+  "coverage": {
+    "rows_retained_pct": 100.0,
+    "columns_produced": 14,
+    "encoded_columns": 3
+  },
+  "format_validity": {
+    "DAYS_OPEN": {
+      "valid_positive_int": 214,
+      "sentinel_negative_ones": 2,
+      "valid_pct": 99.07
+    },
+    "PRIMARY_LOCATION_CODE": {
+      "all_non_negative": true,
+      "unique_codes": 22,
+      "dtype": "int64"
+    },
+    "WORKER_SUB_TYPE_CODE": {
+      "all_non_negative": true,
+      "unique_codes": 6,
+      "dtype": "int64"
+    },
+    "MANAGEMENT_LEVEL_JOB_REQUISITION_CODE": {
+      "all_non_negative": true,
+      "unique_codes": 7,
+      "dtype": "int64"
+    },
+    "CLEANED_JOB_DESCRIPTION": {
+      "empty_strings": 0,
+      "non_empty": 216,
+      "non_empty_pct": 100.0
+    },
+    "CLEANED_JOB_PROFILE_SUMMARY": {
+      "empty_strings": 0,
+      "non_empty": 216,
+      "non_empty_pct": 100.0
+    }
+  }
+}
